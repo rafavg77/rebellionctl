@@ -1,1 +1,3 @@
 python-nmap
+gspread
+oauth2client

@@ -44,9 +44,3 @@ def main():
 	scan()
 
 main()
-# nm = nmap.PortScanner()
-# nm.scan(hosts='192.168.88.0/24', arguments='-sn')
-# nm.command_line()
-# hosts_list = [(x, nm[x]['status']['state']) for x in nm.all_hosts()]
-# for host, status in hosts_list:
-# 	print('{0}:{1}'.host)

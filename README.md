@@ -8,6 +8,6 @@ Como usar?
 ```
 git clone https://github.com/rafavg77/rebellionctl.git
 cd rebellionctl
-python -m pip install -r requirements.txt
-python script.py
+pip3 install -r requirements.txt
+python3 script.py
 ```

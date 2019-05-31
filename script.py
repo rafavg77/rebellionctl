@@ -17,12 +17,11 @@ def scan():
 	a=nm.scan(hosts=cidr2, arguments='-sP') 
 
 	macs = []
-	for k,v in a['scan'].iteritems(): 
+	for k,v in a['scan'].items(): 
 		if str(v['status']['state']) == 'up':
 			try:    
-				print str(v['addresses']['mac'])
 				macs.append(str(v['addresses']['mac']))
-			except: print str(v['addresses']['ipv4'])
+			except: print(str(v['addresses']['ipv4']))
 	
 	logSpreadsheet(macs,date)
 
@@ -33,14 +32,12 @@ def logSpreadsheet(macs,date):
 	sheet = client.open("Monitoreo-Casa").sheet1
 
 	for mac in macs:
-		print date, mac
 		row = [date,str(mac),"DeLorear"]
-		print row
 		index = 1
 		sheet.append_row(row)
-
+	print("done")
 
 def main():
 	scan()
 
-main()
+main() 
